@@ -35,7 +35,7 @@
         "data-spreadsheet"
     ],
     "dependencies": {
-        "jsuites": "^3.3.0"
+        "jsuites": "github:deftdawg/jsuites",
     },
     "main": "dist/jexcel.js",
     "version": "4.3.0",
