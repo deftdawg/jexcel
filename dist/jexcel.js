@@ -1788,15 +1788,14 @@ if (! jSuites && typeof(require) === 'function') {
             }
 
             var query = obj.filters[columnId];
-            if (query.length == 0) {
-                obj.results = null;
-            } else {
-                obj.results = [];
-                for (var j = 0; j < obj.options.data.length; j++) {
-                    if (search(query, columnId, j)) {
-                        obj.results.push(j);
-                    }
+            obj.results = [];
+            for (var j = 0; j < obj.options.data.length; j++) {
+                if (search(query, columnId, j)) {
+                    obj.results.push(j);
                 }
+            }
+            if (! obj.results.length) {
+                obj.results = null;
             }
 
             obj.updateResult();
